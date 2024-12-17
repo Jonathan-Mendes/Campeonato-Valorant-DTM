@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./img/icons/favicon.svg">
+    <title>Sorteio de Mapas</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <picture>
+                <source srcset="./img/mobile.webp" media="(max-width: 650px)" />
+                <source srcset="./img/banner2.webp" media="(min-width: 650px)" />
+                <img src="./img/banner2.webp" alt="" />
+            </picture>
+            <div class="text">
+                <h1>
+                    Sorteio de Mapas
+                </h1>
+            </div>
+        </div>
+    </header>
+    
+    <main class="sorteio">
+        <h2 class="title">Sorteio de Mapas</h2>
+        
+        <p>Escolha os 2 mapas que irão ficar de fora do sorteio</p>
+        <br/>
+        <p class="center">Mapas removidos <span id="mapas-removidos">0/2</span></p>
+
+        <section class="maps">
+            <ul class="list">
+                <li data-index="1">ABYSS</li>
+                <li data-index="2">ASCENT</li>
+                <li data-index="3">BIND</li>
+                <li data-index="4">BREEZE</li>
+                <li data-index="5">FRACTURE</li>
+                <li data-index="6">HAVEN</li>
+                <li data-index="7">ICEBOX</li>
+                <li data-index="8">LOTUS</li>
+                <li data-index="9">PEARL</li>
+                <li data-index="10">SPLIT</li>
+                <li data-index="11">SUNSET</li>
+            </ul>
+        </section>
+
+        <button id="btn-sortear" onclick="sortear();" disabled>Sortear</button>
+
+        <div id="result" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="data" class="active">
+                    <div class="loader active"></div>
+                    <div id="img-mapa" />
+                    <h2 id="nome-mapa"></h2>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

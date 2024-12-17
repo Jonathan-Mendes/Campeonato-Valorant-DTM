@@ -85,7 +85,8 @@ main {
     color: #fff;
 }
 
-.table table td, .table table th {
+.table table td,
+.table table th {
     border-width: 2px;
     border-color: #E1173F;
     border-style: solid;
@@ -134,7 +135,8 @@ main {
     color: #fff;
 }
 
-.matches table td, .matches table th {
+.matches table td,
+.matches table th {
     border-width: 2px;
     border-color: #E1173F;
     border-style: solid;
@@ -276,6 +278,7 @@ main {
     font-size: 16px;
     font-weight: bold;
     margin-top: 20px;
+    font-family: Orbitron, sans-serif;
 }
 
 .rules a:hover {
@@ -392,23 +395,27 @@ main {
     }
 
     /* Tables */
-    .table, .matches {
+    .table,
+    .matches {
         overflow-x: auto;
         margin: 0 20px;
         padding-bottom: 20px;
         justify-content: start;
     }
 
-    .table table td, .table table th {
+    .table table td,
+    .table table th {
         min-width: 150px;
     }
 
-    .matches table td, .matches table th {
+    .matches table td,
+    .matches table th {
         min-width: 210px;
     }
 
     /* Lists */
-    .players, .teams {
+    .players,
+    .teams {
         margin-bottom: 50px;
     }
 
@@ -429,5 +436,221 @@ main {
 
     .teams .list {
         width: 150px;
+    }
+}
+
+/* Sorteio de Mapas */
+.sorteio {
+    padding: 50px 0;
+}
+
+.sorteio .title {
+    margin-bottom: 50px;
+}
+
+.sorteio #mapas-removidos {
+    color: #E1173F;
+    font-weight: bold;
+    font-family: Orbitron, sans-serif;
+}
+
+.sorteio p {
+    max-width: 700px;
+    text-align: center;
+    margin: 0 auto;
+    font-family: "Julius Sans One", sans-serif;
+}
+
+.sorteio button {
+    cursor: pointer;
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+    padding: 19px 32px;
+    color: #0F1923;
+    background-color: #fff;
+    outline: #fff solid 1px;
+    outline-offset: 3px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 auto;
+    font-family: Orbitron, sans-serif;
+}
+
+.sorteio button:disabled {
+    cursor: not-allowed;
+    background-color: #dadada;
+}
+
+.sorteio button {
+    color: #fff;
+    background-color: #e1173f75;
+}
+
+.maps {
+    display: flex;
+    margin: 20px auto 50px auto;
+    justify-content: center;
+    border: 1px solid #E1173F;
+    padding: 20px 0;
+    max-width: 700px;
+}
+
+.maps .list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.maps .list li {
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #E1173F;
+    display: block;
+    width: fit-content;
+    padding: 19px 32px;
+    margin: 5px;
+    color: #fff;
+    outline-offset: 3px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Orbitron, sans-serif;
+}
+
+.maps .list li.active {
+    background-color: #fff;
+    color: #E1173F;
+}
+
+.maps .list li:hover {
+    color: #fff;
+    background-color: #e1173f75;
+}
+
+/* modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal #img-mapa {
+    width: 100%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    max-height: 40%;
+    margin: 40px auto;
+    display: block;
+}
+
+.modal h2 {
+    text-align: center;
+    color: #FFF;
+    position: relative;
+    bottom: 50px;
+}
+
+.modal-content {
+    background-color: #0F1923;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #E1173F;
+    width: 50%;
+    height: 50%;
+}
+
+.modal-content #data {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.modal-content #data.active {
+    display: flex;
+}
+
+.close {
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+    resize: 0;
+}
+
+.close:hover,
+.close:focus {
+    color: #E1173F;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Loader */
+.loader {
+    width: 48px;
+    height: 48px;
+    display: none;
+}
+
+.loader.active {
+    display: inline-block;
+}
+
+.loader::after,
+.loader::before {
+    content: '';
+    box-sizing: border-box;
+    width: 48px;
+    height: 48px;
+    border: 2px solid #FFF;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    top: 50%;
+    bottom: 50%;
+    z-index: 99;
+    animation: rotationBreak 3s ease-in-out infinite alternate;
+}
+
+.loader::after {
+    border-color: #E1173F;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes rotationBreak {
+    0% {
+        transform: rotate(0);
+    }
+
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(270deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
     }
 }
