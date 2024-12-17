@@ -351,9 +351,12 @@ main {
         justify-content: start;
     }
 
-    .table table td, .table table th,
+    .table table td, .table table th {
+        min-width: 150px;
+    }
+
     .matches table td, .matches table th {
-        min-width: 200px;
+        min-width: 210px;
     }
 
     /* Lists */
