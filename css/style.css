@@ -162,7 +162,7 @@ main {
 
 .matches table td.winner::before {
     content: "";
-    background-image: url("/img/icons/winner.svg");
+    background-image: url("../img/icons/winner.svg");
     width: 30px;
     height: 30px;
     position: relative;
