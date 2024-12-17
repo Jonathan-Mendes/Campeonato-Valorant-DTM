@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Orbitron:wght@400..900&display=swap');
 
 * {
     margin: 0;
@@ -120,7 +120,7 @@ main {
 
 .table a:hover {
     color: #fff;
-    background-color: #E1173F;
+    background-color: #e1173f75;
 }
 
 .matches table {
@@ -178,7 +178,7 @@ main {
     display: block;
     text-align: center;
     width: 100%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Julius Sans One", sans-serif;
 }
 
 .matches a {
@@ -196,7 +196,7 @@ main {
 
 .matches a:hover {
     color: #fff;
-    background-color: #E1173F;
+    background-color: #e1173f75;
 }
 
 /* Update */
@@ -214,7 +214,7 @@ main {
     display: block;
     text-align: center;
     width: 100%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Julius Sans One", sans-serif;
 }
 
 .update a {
@@ -232,7 +232,55 @@ main {
 
 .update a:hover {
     color: #fff;
-    background-color: #E1173F;
+    background-color: #e1173f75;
+}
+
+/* Rules */
+.rules .card {
+    width: fit-content;
+    margin: 50px auto 100px auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #E1173F;
+    padding: 40px;
+    font-family: "Julius Sans One", sans-serif;
+}
+
+.rules p {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: start;
+}
+
+.rules span {
+    color: #E1173F;
+    font-weight: 600;
+}
+
+.rules ul li::marker {
+    color: #E1173F;
+}
+
+.rules a {
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+    padding: 19px 32px;
+    color: #0F1923;
+    background-color: #fff;
+    outline: #fff solid 1px;
+    outline-offset: 3px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.rules a:hover {
+    color: #fff;
+    background-color: #e1173f75;
 }
 
 /* Players */
