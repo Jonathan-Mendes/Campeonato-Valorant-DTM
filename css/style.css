@@ -654,3 +654,35 @@ main {
         transform: rotate(360deg);
     }
 }
+
+
+@media only screen and (max-width: 1024px) {
+    .sorteio p {
+        max-width: 90%;
+    }
+
+    .modal-content {
+        width: 80%;
+        margin: auto;
+    }
+
+    .loader::after,
+    .loader::before {
+        left: 48%;
+        right: 48%;
+        top: 48%;
+        bottom: 48%;
+    }
+
+    .maps .list li {
+        width: 28%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .maps {
+        margin: 20px 20px 50px 20px;
+        max-width: 100%;
+    }
+}
