@@ -1,13 +1,110 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./img/icons/favicon.svg">
     <title>Sorteio de Mapas</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/navbar-desktop.css" media="(min-width: 650px)" />
+    <link rel="stylesheet" href="./css/navbar-mobile.css" media="(max-width: 650px)" />
+    <link rel="stylesheet" href="./css/style.css"/>
 </head>
+
 <body>
+    <!-- Navbar Desktop -->
+    <nav id="navbar" class="navbar-desktop">
+        <ul class="navbar-items flexbox-col">
+            <li class="navbar-logo flexbox-left">
+                <a href="./index.html" class="navbar-item-inner flexbox">
+                    <img src="./img/icons/favicon.svg" />
+                    <span>Menu</span>
+                </a>
+            </li>
+
+            <li class="navbar-item flexbox-left">
+                <a href="./index.html" class="navbar-item-inner flexbox-left">
+                    <div class="navbar-item-inner-icon-wrapper flexbox">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </div>
+                    <span class="link-text">Início</span>
+                </a>
+            </li>
+            
+            <li class="navbar-item flexbox-left">
+                <a href="./index.html#tabela" class="navbar-item-inner flexbox-left">
+                    <div class="navbar-item-inner-icon-wrapper flexbox">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </div>
+                    <span class="link-text">Tabela</span>
+                </a>
+            </li>
+
+            <li class="navbar-item flexbox-left">
+                <a href="./index.html#confrontos" class="navbar-item-inner flexbox-left">
+                    <div class="navbar-item-inner-icon-wrapper flexbox">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </div>
+                    <span class="link-text">Confrontos</span>
+                </a>
+            </li>
+
+            <li class="navbar-item flexbox-left">
+                <a href="./index.html#regras" class="navbar-item-inner flexbox-left">
+                    <div class="navbar-item-inner-icon-wrapper flexbox">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </div>
+                    <span class="link-text">Regras</span>
+                </a>
+            </li>
+
+            <li class="navbar-item flexbox-left">
+                <a href="./index.html#jogadores" class="navbar-item-inner flexbox-left">
+                    <div class="navbar-item-inner-icon-wrapper flexbox">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </div>
+                    <span class="link-text">Jogadores</span>
+                </a>
+            </li>
+
+            <li class="navbar-item flexbox-left">
+                <a href="./index.html#times" class="navbar-item-inner flexbox-left">
+                    <div class="navbar-item-inner-icon-wrapper flexbox">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </div>
+                    <span class="link-text">Times</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Navbar Desktop -->
+
+    <!-- Navbar Mobile -->
+    <nav>
+        <div class="navbar navbar-mobile">
+        <div class="container nav-container">
+            <input class="checkbox" type="checkbox" name="" id="icon-menu" />
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>  
+            <div class="logo">
+                <img src="./img/icons/favicon.svg" />
+            </div>
+            <div class="menu-items">
+            <li><a onclick="$('#icon-menu').trigger('click')" href="./index.html">Início</a></li>
+            <li><a onclick="$('#icon-menu').trigger('click')" href="./index.html#tabela">Tabela</a></li>
+            <li><a onclick="$('#icon-menu').trigger('click')" href="./index.html#confrontos">Confrontos</a></li>
+            <li><a onclick="$('#icon-menu').trigger('click')" href="./index.html#regras">Regras</a></li>
+            <li><a onclick="$('#icon-menu').trigger('click')" href="./index.html#jogadores">Jogadores</a></li>
+            <li><a onclick="$('#icon-menu').trigger('click')" href="./index.html#times">Times</a></li>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <!-- Navbar Mobile -->
+
     <header>
         <div class="banner">
             <picture>
@@ -15,19 +112,19 @@
                 <source srcset="./img/banner2.webp" media="(min-width: 650px)" />
                 <img src="./img/banner2.webp" alt="" />
             </picture>
-            <div class="text">
+            <div class="text margin-menu-title">
                 <h1>
                     Sorteio de Mapas
                 </h1>
             </div>
         </div>
     </header>
-    
+
     <main class="sorteio">
         <h2 class="title">Sorteio de Mapas</h2>
-        
+
         <p>Escolha os 2 mapas que irão ficar de fora do sorteio</p>
-        <br/>
+        <br />
         <p class="center">Mapas removidos <span id="mapas-removidos">0/2</span></p>
 
         <section class="maps">
@@ -63,4 +160,5 @@
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/index.js"></script>
 </body>
+
 </html>

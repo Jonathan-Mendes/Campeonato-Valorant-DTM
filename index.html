@@ -1,13 +1,110 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./img/icons/favicon.svg">
     <title>Campeonato Valorant DTM</title>
+    <link rel="stylesheet" href="./css/navbar-desktop.css" media="(min-width: 650px)" />
+    <link rel="stylesheet" href="./css/navbar-mobile.css" media="(max-width: 650px)" />
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
+    <!-- Navbar Desktop -->
+    <nav id="navbar" class="navbar-desktop">
+        <ul class="navbar-items flexbox-col">
+            <li class="navbar-logo flexbox-left">
+                <a href="./index.html" class="navbar-item-inner flexbox">
+                    <img src="./img/icons/favicon.svg" />
+                    <span>Menu</span>
+                </a>
+            </li>
+
+            <li class="navbar-item flexbox-left">
+                <a href="./index.html#tabela" class="navbar-item-inner flexbox-left">
+                    <div class="navbar-item-inner-icon-wrapper flexbox">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </div>
+                    <span class="link-text">Tabela</span>
+                </a>
+            </li>
+
+            <li class="navbar-item flexbox-left">
+                <a href="./index.html#confrontos" class="navbar-item-inner flexbox-left">
+                    <div class="navbar-item-inner-icon-wrapper flexbox">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </div>
+                    <span class="link-text">Confrontos</span>
+                </a>
+            </li>
+
+            <li class="navbar-item flexbox-left">
+                <a href="./index.html#regras" class="navbar-item-inner flexbox-left">
+                    <div class="navbar-item-inner-icon-wrapper flexbox">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </div>
+                    <span class="link-text">Regras</span>
+                </a>
+            </li>
+
+            <li class="navbar-item flexbox-left">
+                <a href="./index.html#jogadores" class="navbar-item-inner flexbox-left">
+                    <div class="navbar-item-inner-icon-wrapper flexbox">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </div>
+                    <span class="link-text">Jogadores</span>
+                </a>
+            </li>
+
+            <li class="navbar-item flexbox-left">
+                <a href="./index.html#times" class="navbar-item-inner flexbox-left">
+                    <div class="navbar-item-inner-icon-wrapper flexbox">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </div>
+                    <span class="link-text">Times</span>
+                </a>
+            </li>
+
+            <li class="navbar-item flexbox-left">
+                <a href="./sorteio-de-mapas.html" class="navbar-item-inner flexbox-left">
+                    <div class="navbar-item-inner-icon-wrapper flexbox">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </div>
+                    <span class="link-text">Sortear Mapa</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Navbar Desktop -->
+
+    <!-- Navbar Mobile -->
+    <nav>
+        <div class="navbar">
+        <div class="container nav-container">
+            <input class="checkbox" type="checkbox" name="" id="icon-menu" />
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>  
+            <div class="logo">
+                <img src="./img/icons/favicon.svg" />
+            </div>
+            <div class="menu-items">
+            <li><a onclick="$('#icon-menu').trigger('click')" href="#tabela">Tabela</a></li>
+            <li><a onclick="$('#icon-menu').trigger('click')" href="#confrontos">Confrontos</a></li>
+            <li><a onclick="$('#icon-menu').trigger('click')" href="#regras">Regras</a></li>
+            <li><a onclick="$('#icon-menu').trigger('click')" href="#jogadores">Jogadores</a></li>
+            <li><a onclick="$('#icon-menu').trigger('click')" href="#times">Times</a></li>
+            <li><a onclick="$('#icon-menu').trigger('click')" href="./sorteio-de-mapas.html">Sortear Mapa</a></li>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <!-- Navbar Mobile -->
+
     <header>
         <div class="banner">
             <picture>
@@ -15,221 +112,266 @@
                 <source srcset="./img/banner2.webp" media="(min-width: 650px)" />
                 <img src="./img/banner2.webp" alt="" />
             </picture>
-            <div class="text">
+            <div class="text margin-menu-title">
                 <h1>
-                    1°  Campeonato Amador <br/>
+                    1° Campeonato Amador <br />
                     de Valorant - DTM
                 </h1>
-    
-                <a href="https://docs.google.com/spreadsheets/d/18-Atjgj1kGwTmJ-w6ZPKEhEmQGVNGmM_y9Djeh2OYWA/edit " target="_blank" class="cta">Conferir tabela oficial</a>
+
+                <a href="https://docs.google.com/spreadsheets/d/18-Atjgj1kGwTmJ-w6ZPKEhEmQGVNGmM_y9Djeh2OYWA/edit "
+                    target="_blank" class="cta">Conferir tabela oficial</a>
             </div>
         </div>
     </header>
 
     <main>
-        <h2 class="title">TABELA</h2>
+        <h2 id="tabela" class="title">TABELA</h2>
         <section class="table">
-            <table  style='overflow-x:auto'>
+            <table class="margin-menu-table">
                 <thead>
-                  <tr>
-                    <th>POSIÇÃO</th>
-                    <th>VITÓRIAS</th>
-                    <th>DERROTAS</th>
-                    <th>ROUNDS WIN</th>
-                    <th>ROUNDS LOSE</th>
-                    <th>PONTOS</th>
-                  </tr>
+                    <tr>
+                        <th>POSIÇÃO</th>
+                        <th>VITÓRIAS</th>
+                        <th>DERROTAS</th>
+                        <th>ROUNDS WIN</th>
+                        <th>ROUNDS LOSE</th>
+                        <th>PONTOS</th>
+                    </tr>
                 </thead>
                 <tbody>
-                  <!-- 1° Lugar -->
-                  <tr>
-                    <td class="team">
-                        <span>1.</span>
-                         Prikitos
-                    </td>
-                    <td>9</td>
-                    <td>0</td>
-                    <td>67</td>
-                    <td>35</td>
-                    <td>9</td>
-                  </tr>
+                    <!-- 1° Lugar -->
+                    <tr>
+                        <td class="team">
+                            <span>1.</span>
+                            Prikitos
+                        </td>
+                        <td>9</td>
+                        <td>0</td>
+                        <td>67</td>
+                        <td>35</td>
+                        <td>9</td>
+                    </tr>
 
-                  <!-- 2° Lugar -->
-                  <tr>
-                    <td class="team">
-                        <span>2.</span>
-                        Os Virgem
-                    </td>
-                    <td>6</td>
-                    <td>3</td>
-                    <td>63</td>
-                    <td>30</td>
-                    <td>6</td>
-                  </tr>
+                    <!-- 2° Lugar -->
+                    <tr>
+                        <td class="team">
+                            <span>2.</span>
+                            Os Virgem
+                        </td>
+                        <td>6</td>
+                        <td>3</td>
+                        <td>63</td>
+                        <td>30</td>
+                        <td>6</td>
+                    </tr>
 
-                  <!-- 3° Lugar -->
-                  <tr>
-                    <td class="team">
-                        <span>3.</span>
-                        PPF
-                    </td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td>39</td>
-                    <td>31</td>
-                    <td>3</td>
-                  </tr>
+                    <!-- 3° Lugar -->
+                    <tr>
+                        <td class="team">
+                            <span>3.</span>
+                            PPF
+                        </td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>39</td>
+                        <td>31</td>
+                        <td>3</td>
+                    </tr>
 
-                  <!-- 4° Lugar -->
-                  <tr>
-                    <td class="team">
-                        <span>4.</span>
-                        Fafas e Lalau
-                    </td>
-                    <td>0</td>
-                    <td>6</td>
-                    <td>13</td>
-                    <td>52</td>
-                    <td>0</td>
-                  </tr>
+                    <!-- 4° Lugar -->
+                    <tr>
+                        <td class="team">
+                            <span>4.</span>
+                            Fafas e Lalau
+                        </td>
+                        <td>0</td>
+                        <td>6</td>
+                        <td>13</td>
+                        <td>52</td>
+                        <td>0</td>
+                    </tr>
 
-                  <!-- 5° Lugar -->
-                  <tr>
-                    <td class="team"> 
-                        <span>5.</span>
-                        Los Ermanos
-                    </td>
-                    <td>0</td>
-                    <td>6</td>
-                    <td>18</td>
-                    <td>52</td>
-                    <td>0</td>
-                  </tr>
+                    <!-- 5° Lugar -->
+                    <tr>
+                        <td class="team">
+                            <span>5.</span>
+                            Los Ermanos
+                        </td>
+                        <td>0</td>
+                        <td>6</td>
+                        <td>18</td>
+                        <td>52</td>
+                        <td>0</td>
+                    </tr>
                 </tbody>
             </table>
         </section>
 
         <section class="update">
-            <small>Tabela atualizada em 17/12/2024 às 09:15</small>
-            <a href="https://docs.google.com/spreadsheets/d/18-Atjgj1kGwTmJ-w6ZPKEhEmQGVNGmM_y9Djeh2OYWA/edit " target="_blank">Conferir tabela oficial</a>
+            <small>Tabela atualizada em 18/12/2024 às 19:05</small>
+            <a href="https://docs.google.com/spreadsheets/d/18-Atjgj1kGwTmJ-w6ZPKEhEmQGVNGmM_y9Djeh2OYWA/edit "
+                target="_blank">Conferir tabela oficial</a>
         </section>
 
-        <h2 class="title">CONFRONTOS</h2>
+        <h2 id="confrontos" class="title">CONFRONTOS</h2>
+        <section class="matches mb-50">
+            <table class="margin-menu-table">
+                <thead>
+                    <tr>
+                        <th>TIME 1</th>
+                        <th>TIME 2</th>
+                        <th>MAPA 1</th>
+                        <th>MAPA 2</th>
+                        <th>MAPA 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 1° Confronto -->
+                    <tr>
+                        <td class="team winner">
+                            PPF -
+                            <span>Sunset</span>
+                        </td>
+                        <td class="team">
+                            Los Ermanos -
+                            <span>Ascent</span>
+                        </td>
+                        <td>13 - 10</td>
+                        <td>13 - 6</td>
+                        <td>0</td>
+                    </tr>
+
+                    <!-- 2° Confronto -->
+                    <tr>
+                        <td class="team winner">
+                            Os Virgem -
+                            <span>Abyss</span>
+                        </td>
+                        <td class="team">
+                            Fafas e Lalau -
+                            <span>Ascent</span>
+                        </td>
+                        <td>13 - 1</td>
+                        <td>13 - 1</td>
+                        <td>0</td>
+                    </tr>
+
+                    <!-- 3° Confronto -->
+                    <tr>
+                        <td class="team winner">
+                            Prikitos -
+                            <span>Haven</span>
+                        </td>
+                        <td class="team">
+                            Fafas e Lalau -
+                            <span>Lotus</span>
+                        </td>
+                        <td>13 - 4</td>
+                        <td>13 - 7</td>
+                        <td>0</td>
+                    </tr>
+
+                    <!-- 4° Confronto -->
+                    <tr>
+                        <td class="team">
+                            PPF -
+                            <span>Sunset</span>
+                        </td>
+                        <td class="team winner">
+                            Prikitos -
+                            <span>Bind</span>
+                        </td>
+                        <td>13 - 15</td>
+                        <td>W.O</td>
+                        <td>0</td>
+                    </tr>
+
+                    <!-- 5° Confronto -->
+                    <tr>
+                        <td class="team">
+                            Os Virgem -
+                            <span>Abyss</span>
+                        </td>
+                        <td class="team winner">
+                            Prikitos -
+                            <span>Lotus</span>
+                        </td>
+                        <td>5 - 13</td>
+                        <td>6 - 13</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <h2 id="confrontos" class="title">PRÓXIMOS</h2>
         <section class="matches">
-            <table>
+            <table class="margin-menu-table">
                 <thead>
-                  <tr>
-                    <th>TIME 1</th>
-                    <th>TIME 2</th>
-                    <th>MAPA 1</th>
-                    <th>MAPA 2</th>
-                    <th>MAPA 3</th>
-                  </tr>
+                    <tr>
+                        <th>TIME 1</th>
+                        <th>TIME 2</th>
+                        <th>DATA</th>
+                    </tr>
                 </thead>
                 <tbody>
-                  <!-- 1° Confronto -->
-                  <tr>
-                    <td class="team winner">
-                        PPF -
-                        <span>Sunset</span>
-                    </td>
-                    <td class="team">
-                        Los Ermanos -
-                        <span>Ascent</span>
-                    </td>
-                    <td>13 - 10</td>
-                    <td>13 - 6</td>
-                    <td>0</td>
-                  </tr>
+                    <!-- 1° Confronto -->
+                    <tr>
+                        <td>PPF</td>
+                        <td>Os Virgem</td>
+                        <td>A definir</td>
+                    </tr>
 
-                  <!-- 2° Confronto -->
-                  <tr>
-                    <td class="team winner">
-                        Os Virgem -
-                        <span>Abyss</span>
-                    </td>
-                    <td class="team">
-                        Fafas e Lalau -
-                        <span>Ascent</span>
-                    </td>
-                    <td>13 - 1</td>
-                    <td>13 - 1</td>
-                    <td>0</td>
-                  </tr>
+                    <!-- 2° Confronto -->
+                    <tr>
+                        <td>PPF</td>
+                        <td>Fafas e Lalau</td>
+                        <td>A definir</td>
+                    </tr>
 
-                  <!-- 3° Confronto -->
-                  <tr>
-                    <td class="team winner">
-                        Prikitos -
-                        <span>Haven</span>
-                    </td>
-                    <td class="team">
-                        Fafas e Lalau -
-                        <span>Lotus</span>
-                    </td>
-                    <td>13 - 4</td>
-                    <td>13 - 7</td>
-                    <td>0</td>
-                  </tr>
+                    <!-- 3° Confronto -->
+                    <tr>
+                        <td>Prikitos</td>
+                        <td>Los Ermanos</td>
+                        <td>A definir</td>
+                    </tr>
 
-                  <!-- 4° Confronto -->
-                  <tr>
-                    <td class="team">
-                        PPF -
-                        <span>Sunset</span>
-                    </td>
-                    <td class="team winner">
-                        Prikitos -
-                        <span>Bind</span>
-                    </td>
-                    <td>13 - 15</td>
-                    <td>W.O</td>
-                    <td>0</td>
-                  </tr>
-
-                  <!-- 5° Confronto -->
-                  <tr>
-                    <td class="team">
-                        Os Virgem -
-                        <span>Abyss</span>
-                    </td>
-                    <td class="team winner">
-                        Prikitos -
-                        <span>Lotus</span>
-                    </td>
-                    <td>5 - 13</td>
-                    <td>6 - 13</td>
-                    <td>0</td>
-                  </tr>
+                    <!-- 4° Confronto -->
+                    <tr>
+                        <td>Fafas e Lalau</td>
+                        <td>Los Ermanos</td>
+                        <td>A definir</td>
+                    </tr>
                 </tbody>
             </table>
         </section>
 
         <section class="update">
-            <small>Tabela atualizada em 17/12/2024 às 09:15</small>
-            <a href="https://docs.google.com/spreadsheets/d/18-Atjgj1kGwTmJ-w6ZPKEhEmQGVNGmM_y9Djeh2OYWA/edit " target="_blank">Conferir tabela oficial</a>
+            <small>Tabela atualizada em 18/12/2024 às 19:05</small>
+            <a href="https://docs.google.com/spreadsheets/d/18-Atjgj1kGwTmJ-w6ZPKEhEmQGVNGmM_y9Djeh2OYWA/edit "
+                target="_blank">Conferir tabela oficial</a>
         </section>
 
-        <h2 class="title">REGRAS</h2>
+        <h2 id="regras" class="title">REGRAS</h2>
         <section class="rules">
             <div class="card">
                 <p>
-                    Confrontos disputados em formato <span>MD3</span>, os mapas são escolhidos da seguinte forma:<br/>
-                    <br/>
-                    <ul>
-                        <li>Mapa 1 <span>Time A</span></li>
-                        <li>Mapa 2 <span>Time B</span></li>
-                    </ul>
-                    <br/>
-                    Caso haja necessidade de uma, 3° partida, o mapa será sorteado entre os mapas não escolhidos.
+                    Confrontos disputados em formato <span>MD3</span>, os mapas são escolhidos da seguinte forma:<br />
+                    <br />
+                <ul>
+                    <li>Mapa 1 <span>Time A</span></li>
+                    <li>Mapa 2 <span>Time B</span></li>
+                </ul>
+                <br />
+                Caso haja necessidade de uma, 3° partida, o mapa será sorteado entre os mapas não escolhidos.
                 </p>
 
                 <a href="./sorteio-de-mapas.html" target="_blank">Sortear mapa</a>
             </div>
         </section>
 
-        <h2 class="title">JOGADORES</h2>
-        <section class="players">
+        <h2 id="jogadores" class="title">JOGADORES</h2>
+        <section class="players margin-menu-list">
             <div class="list">
                 <h3 class="role">
                     <img src="./img/icons/roleDuelist.svg" />
@@ -287,8 +429,8 @@
             </div>
         </section>
 
-        <h2 class="title">TIMES</h2>
-        <section class="teams">
+        <h2 id="times" class="title">TIMES</h2>
+        <section class="teams margin-menu-list">
             <div class="list">
                 <h3 class="role">PPF</h3>
                 <ul>
@@ -345,5 +487,7 @@
             </div>
         </section>
     </main>
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
 </body>
 </html>

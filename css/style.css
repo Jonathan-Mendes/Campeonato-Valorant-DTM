@@ -5,11 +5,38 @@
     padding: 0;
 }
 
+html,
+body {
+    margin: 0;
+    width: 100%;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
 body {
     background-color: #0F1923;
     color: #fff;
     font-family: Orbitron, sans-serif;
     overflow-x: hidden;
+}
+
+.navbar-desktop {
+    display: block;
+}
+
+.navbar-mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+    .navbar-desktop {
+        display: none;
+    }
+
+    .navbar-mobile {
+        display: block;
+    }
 }
 
 .banner img {
@@ -19,7 +46,6 @@ body {
 .banner .text {
     position: absolute;
     top: 180px;
-    left: 50px;
 }
 
 .banner .text h1 {
@@ -401,6 +427,10 @@ main {
         margin: 0 20px;
         padding-bottom: 20px;
         justify-content: start;
+    }
+
+    .rules {
+        margin: 0 20px;
     }
 
     .table table td,
