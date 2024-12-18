@@ -21,6 +21,10 @@ body {
     overflow-x: hidden;
 }
 
+.mb-50 {
+    margin-bottom: 50px !important;
+}
+
 .navbar-desktop {
     display: block;
 }
