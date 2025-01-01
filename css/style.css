@@ -21,6 +21,10 @@ body {
     overflow-x: hidden;
 }
 
+input[type="radio"]:checked {
+    accent-color: #e1173f75;
+}
+
 .mb-50 {
     margin-bottom: 50px !important;
 }
@@ -488,6 +492,12 @@ main {
     font-family: Orbitron, sans-serif;
 }
 
+.sorteio #md {
+    color: #E1173F;
+    font-weight: bold;
+    font-family: Orbitron, sans-serif;
+}
+
 .sorteio p {
     max-width: 700px;
     text-align: center;
@@ -520,6 +530,26 @@ main {
 .sorteio button {
     color: #fff;
     background-color: #e1173f75;
+}
+
+form.md {
+    display: flex;
+    margin: 20px auto 50px auto;
+    justify-content: center;
+    border: 1px solid #E1173F;
+    padding: 20px;
+    max-width: fit-content
+}
+
+form.md fieldset {
+    border: none;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+form.md fieldset input,
+form.md fieldset label {
+    cursor: pointer;
 }
 
 .maps {

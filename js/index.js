@@ -1,4 +1,5 @@
 var mapasRemovidos = 0;
+var qtdMapasRemovidos = 2;
 const mapas = ["ABYSS", "ASCENT", "BIND", "BREEZE", "FRACTURE", "HAVEN", "ICEBOX", "LOTUS", "PEARL", "SPLIT", "SUNSET"];
 
 $(".maps .list li").on("click", function() {
@@ -9,7 +10,7 @@ $(".maps .list li").on("click", function() {
         return;
     }
 
-    if(mapasRemovidos < 2) {
+    if(mapasRemovidos < qtdMapasRemovidos) {
         $(this).toggleClass("active");
         mapasRemovidos++;
         checkMaps();
@@ -18,12 +19,25 @@ $(".maps .list li").on("click", function() {
 });
 
 function checkMaps() {
-    $("#mapas-removidos").html(`${mapasRemovidos}/2`);
+    $("#mapas-removidos").html(`${mapasRemovidos}/${qtdMapasRemovidos}`);
 
-    if(mapasRemovidos == 2)
+    console.log(mapasRemovidos)
+    console.log(qtdMapasRemovidos)
+
+    if(mapasRemovidos === qtdMapasRemovidos)
         $("#btn-sortear").prop("disabled", false);
     else
         $("#btn-sortear").prop("disabled", true);
+}
+
+function formatoSorteio(radio) {
+    mapasRemovidos = 0
+    qtdMapasRemovidos = parseInt($('input[name="md"]:checked').val());
+
+    $('.maps .list li').removeClass("active");
+    $("#btn-sortear").prop("disabled", true);
+    $("#md").html(qtdMapasRemovidos);
+    $("#mapas-removidos").html(`${mapasRemovidos}/${qtdMapasRemovidos}`);
 }
 
 function sortear() {
@@ -36,7 +50,6 @@ function sortear() {
 
     let mapa = indexMaps[Math.floor(Math.random() * indexMaps.length)];
     openModal(mapa);
-
 }
 
 function openModal(mapa) {

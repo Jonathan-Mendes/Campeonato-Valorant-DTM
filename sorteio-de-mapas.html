@@ -123,7 +123,20 @@
     <main class="sorteio">
         <h2 class="title">Sorteio de Mapas</h2>
 
-        <p>Escolha os 2 mapas que irão ficar de fora do sorteio</p>
+        <p>Escolha o formato do sorteio:</p>
+        
+        <form class="md">
+            <fieldset>
+                <input type="radio" id="md3" name="md" value="2" onchange="formatoSorteio(this);" checked />
+                <label for="md3">MD3</label>
+            </fieldset>
+            <fieldset>
+                <input type="radio" id="md5" name="md" value="4" onchange="formatoSorteio(this);" />
+                <label for="md5">MD5</label>  
+            </fieldset>
+        </form>
+
+        <p>Escolha os <span id="md">2</span> mapas que irão ficar de fora do sorteio</p>
         <br />
         <p class="center">Mapas removidos <span id="mapas-removidos">0/2</span></p>
 
