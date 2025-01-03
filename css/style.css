@@ -119,6 +119,26 @@ main {
     color: #fff;
 }
 
+.table tr.winner td {
+    background-color: #e1173f31;
+}
+
+.table tr.winner td:first-child {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: #e1173f31;    
+}
+
+
+.table tr.winner td:first-child::after {
+    content: "";
+    background-image: url("../img/icons/winner.svg");
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
 .table table td,
 .table table th {
     border-width: 2px;
